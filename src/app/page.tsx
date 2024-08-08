@@ -1,4 +1,6 @@
-import { Box, Card, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import { Card, Flex, Heading, Section, Text } from "@radix-ui/themes";
+
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +16,14 @@ export default function Home() {
             solucionar su problema de fijación
           </Text>
         </Card>
+      </Section>
+      <Section>
+        <Flex justify="center">
+          <Heading size="8" mb="4">
+            Contacto
+          </Heading>
+        </Flex>
+        <Contact />
       </Section>
     </Flex>
   );

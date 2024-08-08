@@ -21,7 +21,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body style={bodyStyle}>
         <Providers>
-          <Container>{children}</Container>
+          <Container size="3" p="4">
+            {children}
+          </Container>
         </Providers>
       </body>
     </html>
