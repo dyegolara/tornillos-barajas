@@ -1,3 +1,4 @@
+import { BackpackIcon, MobileIcon } from "@radix-ui/react-icons";
 import { Card, Flex, Heading, Link, Text } from "@radix-ui/themes";
 
 export default function Contact() {
@@ -15,7 +16,8 @@ export default function Contact() {
           </Text>
           <Text as="p">
             Teléfono:
-            <Link href={`tel:53706821`}> 53-07-68-21</Link>
+            <br />
+            <BackpackIcon /> <Link href={`tel:53706821`}>53-07-68-21</Link>
           </Text>
         </address>
       </Card>
@@ -32,9 +34,9 @@ export default function Contact() {
           <Text as="p">
             Teléfonos:
             <br />
-            <Link href={`tel:55626134`}> 5562-6134</Link>
+            <BackpackIcon /> <Link href={`tel:55626134`}>5562-6134</Link>
             <br />
-            <Link href={`tel:5522705205`}> 044-55-2270-5205</Link>
+            <MobileIcon /> <Link href={`tel:5522705205`}>044-55-2270-5205</Link>
           </Text>
         </address>
       </Card>
