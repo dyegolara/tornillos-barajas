@@ -1,4 +1,4 @@
-import { Card, Flex, Heading, Text } from "@radix-ui/themes";
+import { Card, Flex, Heading, Link, Text } from "@radix-ui/themes";
 
 export default function Contact() {
   return (
@@ -15,7 +15,7 @@ export default function Contact() {
           </Text>
           <Text as="p">
             Teléfono:
-            <a href={`tel:53706821`}> 53-07-68-21</a>
+            <Link href={`tel:53706821`}> 53-07-68-21</Link>
           </Text>
         </address>
       </Card>
@@ -32,9 +32,9 @@ export default function Contact() {
           <Text as="p">
             Teléfonos:
             <br />
-            <a href={`tel:55626134`}> 5562-6134</a>
+            <Link href={`tel:55626134`}> 5562-6134</Link>
             <br />
-            <a href={`tel:5522705205`}> 044-55-2270-5205</a>
+            <Link href={`tel:5522705205`}> 044-55-2270-5205</Link>
           </Text>
         </address>
       </Card>
