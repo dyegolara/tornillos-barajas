@@ -3,8 +3,8 @@ import { Card, Flex, Heading, Link, Text } from "@radix-ui/themes";
 
 export default function Contact() {
   return (
-    <Flex gap="4">
-      <Card asChild style={{ flex: 1 }}>
+    <Flex gap="4" direction={{ initial: "column", sm: "row" }}>
+      <Card asChild style={{ flex: 1 }} size={{ initial: "2", sm: "3" }}>
         <address>
           <Heading size="5">Planta:</Heading>
           <Text as="p">
@@ -21,7 +21,7 @@ export default function Contact() {
           </Text>
         </address>
       </Card>
-      <Card style={{ flex: 1 }} asChild>
+      <Card asChild style={{ flex: 1 }} size={{ initial: "2", sm: "3" }}>
         <address>
           <Heading size="5">Oficinas:</Heading>
           <Text as="p">
