@@ -33,7 +33,7 @@ export default function Header() {
             <Link href="/">Home</Link>
           </TabNav.Link>
           <TabNav.Link asChild active={pathname === "/about"}>
-            <Link href={"#"}>Acerca de</Link>
+            <Link href="/about">Acerca de</Link>
           </TabNav.Link>
           <TabNav.Link asChild active={pathname === "/contact"}>
             <Link href="/contact">Contacto</Link>
