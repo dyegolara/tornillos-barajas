@@ -15,7 +15,7 @@ import SvgLogo from "@/components/SvgLogo";
 
 export default function Header() {
   const pathname = usePathname();
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -44,12 +44,14 @@ export default function Header() {
       <Flex gap={"3"}>
         <Box display={{ initial: "none", sm: "block" }}>
           <IconButton
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() =>
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }
             variant="outline"
-            aria-label={"Modo" + theme === "dark" ? "claro" : "oscuro"}
+            aria-label={"Modo" + resolvedTheme === "dark" ? "claro" : "oscuro"}
             size={"3"}
           >
-            {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+            {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
           </IconButton>
         </Box>
         <Box display={{ initial: "block", sm: "none" }}>
@@ -71,10 +73,12 @@ export default function Header() {
               </DropdownMenu.Item>
               <DropdownMenu.Separator />
               <DropdownMenu.Item
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() =>
+                  setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                }
               >
-                {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-                Modo {theme === "dark" ? "claro" : "oscuro"}
+                {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
+                Modo {resolvedTheme === "dark" ? "claro" : "oscuro"}
               </DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Root>
