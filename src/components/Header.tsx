@@ -26,7 +26,9 @@ export default function Header() {
       p={"4"}
       style={{ borderBottom: "1px solid var(--gray-5)" }}
     >
-      <Image src={Logo} alt={"Tornillos Barajas Logo"} width={150} />
+      <Link href="/">
+        <Image src={Logo} alt={"Tornillos Barajas Logo"} width={150} />
+      </Link>
       <Box display={{ initial: "none", sm: "block" }}>
         <TabNav.Root>
           <TabNav.Link asChild active={pathname === "/"}>
