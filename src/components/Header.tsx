@@ -62,13 +62,13 @@ export default function Header() {
             </DropdownMenu.Trigger>
             <DropdownMenu.Content>
               <DropdownMenu.Item asChild>
-                <Link href={"/"}>Home</Link>
+                <Link href="/">Home</Link>
               </DropdownMenu.Item>
               <DropdownMenu.Item asChild>
-                <Link href={"#"}>Acerca de</Link>
+                <Link href="/about">Acerca de</Link>
               </DropdownMenu.Item>
               <DropdownMenu.Item asChild>
-                <Link href={"#"}>Contacto</Link>
+                <Link href="/contact">Contacto</Link>
               </DropdownMenu.Item>
               <DropdownMenu.Separator />
               <DropdownMenu.Item

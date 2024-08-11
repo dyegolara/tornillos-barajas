@@ -13,7 +13,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <Flex direction="column">
+    <>
       <Section size={{ initial: "1", sm: "2" }}>
         <Flex justify="center">
           <Heading
@@ -70,6 +70,6 @@ export default function Home() {
         </Flex>
         <Contact />
       </Section>
-    </Flex>
+    </>
   );
 }
