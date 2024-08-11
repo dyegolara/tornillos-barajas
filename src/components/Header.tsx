@@ -6,13 +6,13 @@ import {
   SunIcon,
 } from "@radix-ui/react-icons";
 import { Box, DropdownMenu, Flex, IconButton, TabNav } from "@radix-ui/themes";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
 import Logo from "@/assets/barajas-tornillos-logo.svg";
+import SvgLogo from "@/components/SvgLogo";
 
 export default function Header() {
   const pathname = usePathname();
@@ -27,7 +27,7 @@ export default function Header() {
       style={{ borderBottom: "1px solid var(--gray-5)" }}
     >
       <Link href="/">
-        <Image src={Logo} alt={"Tornillos Barajas Logo"} width={150} />
+        <SvgLogo darkMode={theme === "dark"} />
       </Link>
       <Box display={{ initial: "none", sm: "block" }}>
         <TabNav.Root>
