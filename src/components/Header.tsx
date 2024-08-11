@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 
-import Logo from "@/assets/barajas-tornillos-logo.svg";
 import SvgLogo from "@/components/SvgLogo";
 
 export default function Header() {
@@ -27,7 +26,7 @@ export default function Header() {
       style={{ borderBottom: "1px solid var(--gray-5)" }}
     >
       <Link href="/">
-        <SvgLogo darkMode={theme === "dark"} />
+        <SvgLogo />
       </Link>
       <Box display={{ initial: "none", sm: "block" }}>
         <TabNav.Root>

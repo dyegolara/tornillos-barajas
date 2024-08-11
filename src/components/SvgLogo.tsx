@@ -1,7 +1,18 @@
-// @ts-ignore
+import { useTheme } from "next-themes";
+import { useEffect, useMemo, useState } from "react";
 
-export default function SvgLogo({ darkMode = false }: { darkMode?: boolean }) {
-  const fill = darkMode ? "#ffffff" : "#000000";
+export default function SvgLogo() {
+  const { theme } = useTheme();
+  const [fill, setFill] = useState("#000000");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      setFill("#ffffff");
+    } else {
+      setFill("#000000");
+    }
+  }, [theme]);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
