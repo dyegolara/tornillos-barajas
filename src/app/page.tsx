@@ -5,16 +5,13 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <Flex direction="column">
-      <Flex justify="center">
-        <Heading size={{ initial: "8", sm: "9" }}>Tornillos Barajas</Heading>
-      </Flex>
-      <Section size={{ initial: "2", sm: "3" }}>
+      <Section size={{ initial: "1", sm: "2" }}>
         <Flex direction="column" gap="4">
           <Card variant="classic" size={{ initial: "2", sm: "3" }}>
             <Text>
-              Tornillos y Remaches Barajas S.A de C.V se pone a su disposición
-              para el diseño y desarrollo de cualquier tornillo o artículo para
-              solucionar su problema de fijación
+              <Text weight="bold">Tornillos y Remaches Barajas S.A de C.V</Text>{" "}
+              se pone a su disposición para el diseño y desarrollo de cualquier
+              tornillo o artículo para solucionar su problema de fijación
             </Text>
           </Card>
           <Card variant="classic" size={{ initial: "2", sm: "3" }}>
