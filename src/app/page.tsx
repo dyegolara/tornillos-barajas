@@ -11,7 +11,7 @@ export default function Home() {
             <Text>
               <Text weight="bold">Tornillos y Remaches Barajas S.A de C.V</Text>{" "}
               se pone a su disposición para el diseño y desarrollo de cualquier
-              tornillo o artículo para solucionar su problema de fijación
+              tornillo o artículo para solucionar su problema de fijación.
             </Text>
           </Card>
           <Card variant="classic" size={{ initial: "2", sm: "3" }}>
