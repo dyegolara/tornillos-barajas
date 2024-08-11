@@ -1,19 +1,8 @@
 import { useTheme } from "next-themes";
-import { useEffect, useMemo, useState } from "react";
 
 export default function SvgLogo() {
   const { resolvedTheme } = useTheme();
-  const [fill, setFill] = useState("#000000");
-
-  console.log("theme", resolvedTheme);
-
-  useEffect(() => {
-    if (resolvedTheme === "dark") {
-      setFill("#ffffff");
-    } else {
-      setFill("#000000");
-    }
-  }, [resolvedTheme]);
+  const fill = resolvedTheme === "dark" ? "#fff" : "#000";
 
   return (
     <svg
