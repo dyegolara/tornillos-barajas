@@ -1,8 +1,25 @@
 import { useTheme } from "next-themes";
+import { SVGProps, useEffect, useState } from "react";
+
+const svgStyle: SVGProps<SVGElement>["style"] = {
+  shapeRendering: "geometricPrecision",
+  textRendering: "geometricPrecision",
+  imageRendering: "auto",
+  fillRule: "evenodd",
+  clipRule: "evenodd",
+};
 
 export default function SvgLogo() {
   const { resolvedTheme } = useTheme();
-  const fill = resolvedTheme === "dark" ? "#fff" : "#000";
+  const [fill, setFill] = useState("#000000");
+
+  useEffect(() => {
+    if (resolvedTheme === "dark") {
+      setFill("#ffffff");
+    } else {
+      setFill("#000000");
+    }
+  }, [resolvedTheme]);
 
   return (
     <svg
@@ -10,13 +27,7 @@ export default function SvgLogo() {
       version="1.1"
       width="150px"
       viewBox={"0 0 950 410"}
-      style={{
-        shapeRendering: "geometricPrecision",
-        textRendering: "geometricPrecision",
-        imageRendering: "auto",
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-      }}
+      style={svgStyle}
     >
       <g>
         <path
