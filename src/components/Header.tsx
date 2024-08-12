@@ -1,87 +1,31 @@
-"use client";
-import {
-  Cross1Icon,
-  HamburgerMenuIcon,
-  MoonIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
-import { Box, DropdownMenu, Flex, IconButton, TabNav } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
-import { useState } from "react";
 
+import DarkModeButton from "@/components/DarkModeButton";
+import Menu from "@/components/Menu";
 import SvgLogo from "@/components/SvgLogo";
+import Tabs from "@/components/Tabs";
 
 export default function Header() {
-  const pathname = usePathname();
-  const { resolvedTheme, setTheme } = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <Flex
       justify="between"
-      align={"center"}
-      p={"4"}
+      align="center"
+      p="4"
       style={{ borderBottom: "1px solid var(--gray-5)" }}
     >
       <Link href="/">
         <SvgLogo />
       </Link>
       <Box display={{ initial: "none", sm: "block" }}>
-        <TabNav.Root>
-          <TabNav.Link asChild active={pathname === "/"}>
-            <Link href="/">Home</Link>
-          </TabNav.Link>
-          <TabNav.Link asChild active={pathname === "/about"}>
-            <Link href="/about">Acerca de</Link>
-          </TabNav.Link>
-          <TabNav.Link asChild active={pathname === "/contact"}>
-            <Link href="/contact">Contacto</Link>
-          </TabNav.Link>
-        </TabNav.Root>
+        <Tabs />
       </Box>
-      <Flex gap={"3"}>
+      <Flex justify="end" width="150px">
         <Box display={{ initial: "none", sm: "block" }}>
-          <IconButton
-            onClick={() =>
-              setTheme(resolvedTheme === "dark" ? "light" : "dark")
-            }
-            variant="outline"
-            aria-label={"Modo" + resolvedTheme === "dark" ? "claro" : "oscuro"}
-            size={"3"}
-          >
-            {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
-          </IconButton>
+          <DarkModeButton />
         </Box>
         <Box display={{ initial: "block", sm: "none" }}>
-          <DropdownMenu.Root onOpenChange={setIsOpen}>
-            <DropdownMenu.Trigger>
-              <IconButton size={"3"} variant="outline" aria-label="Open menu">
-                {isOpen ? <Cross1Icon /> : <HamburgerMenuIcon />}
-              </IconButton>
-            </DropdownMenu.Trigger>
-            <DropdownMenu.Content>
-              <DropdownMenu.Item asChild>
-                <Link href="/">Home</Link>
-              </DropdownMenu.Item>
-              <DropdownMenu.Item asChild>
-                <Link href="/about">Acerca de</Link>
-              </DropdownMenu.Item>
-              <DropdownMenu.Item asChild>
-                <Link href="/contact">Contacto</Link>
-              </DropdownMenu.Item>
-              <DropdownMenu.Separator />
-              <DropdownMenu.Item
-                onClick={() =>
-                  setTheme(resolvedTheme === "dark" ? "light" : "dark")
-                }
-              >
-                {resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
-                Modo {resolvedTheme === "dark" ? "claro" : "oscuro"}
-              </DropdownMenu.Item>
-            </DropdownMenu.Content>
-          </DropdownMenu.Root>
+          <Menu />
         </Box>
       </Flex>
     </Flex>

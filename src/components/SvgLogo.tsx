@@ -1,3 +1,4 @@
+"use client";
 import { useTheme } from "next-themes";
 import { SVGProps, useEffect, useState } from "react";
 
