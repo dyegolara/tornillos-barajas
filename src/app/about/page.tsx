@@ -1,6 +1,7 @@
 import { Card, Flex, Heading, Section, Text } from "@radix-ui/themes";
 
 import Contact from "@/components/Contact";
+import Gallery from "@/components/Gallery";
 
 export default function About() {
   return (
@@ -87,6 +88,17 @@ export default function About() {
             </ul>
           </Card>
         </Flex>
+      </Section>
+      <Section size="1">
+        <Flex justify="center">
+          <Heading
+            size={{ initial: "6", sm: "7" }}
+            mb={{ initial: "4", sm: "5" }}
+          >
+            Galería
+          </Heading>
+        </Flex>
+        <Gallery />
       </Section>
       <Section size="1">
         <Flex justify="center">

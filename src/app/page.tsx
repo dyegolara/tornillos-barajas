@@ -14,7 +14,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
-      <Section size={{ initial: "1", sm: "2" }}>
+      <Section size={{ initial: "2", sm: "3" }}>
         <Flex justify="center">
           <Heading
             size={{ initial: "7", sm: "8" }}
