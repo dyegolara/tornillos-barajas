@@ -21,7 +21,7 @@ export default function Home() {
         <Flex justify="center">
           <Heading
             size={{ initial: "7", sm: "8" }}
-            mb={{ initial: "4", sm: "5" }}
+            mb={{ initial: "6", sm: "7" }}
             style={{ textAlign: "center" }}
           >
             Tornillos y Remaches Barajas S.A de C.V.

@@ -32,7 +32,7 @@ export default function Contact() {
                 <br />
                 <Link asChild>
                   <NextLink href={`tel:53706821`}>
-                    <PiFactory /> 53-07-68-21
+                    <PiFactory /> 5307 6821
                   </NextLink>
                 </Link>
               </Text>
@@ -55,13 +55,13 @@ export default function Contact() {
                 <br />
                 <Link asChild>
                   <NextLink href={`tel:55626134`}>
-                    <PiBuildingOffice /> 5562-6134
+                    <PiBuildingOffice /> 5562 6134
                   </NextLink>
                 </Link>
                 <br />
                 <Link asChild>
                   <NextLink href={`tel:5522705205`}>
-                    <MobileIcon /> 044-55-2270-5205
+                    <MobileIcon /> 55 2270 5205
                   </NextLink>
                 </Link>
               </Text>
