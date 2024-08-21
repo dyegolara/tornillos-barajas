@@ -32,6 +32,7 @@ export default function Home() {
             <Inset side={{ initial: "top", sm: "left" }}>
               <Flex justify={"center"} align={"center"}>
                 <Image
+                  placeholder="blur"
                   src={Screws}
                   alt={"Tornillos"}
                   style={{

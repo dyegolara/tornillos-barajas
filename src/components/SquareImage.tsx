@@ -29,7 +29,7 @@ const styles = {
 export default function SquareImage({ src, alt, onClick }: Props) {
   return (
     <Box style={styles.container} onClick={onClick}>
-      <Image src={src} alt={alt} style={styles.image} />
+      <Image src={src} alt={alt} style={styles.image} placeholder="blur" />
     </Box>
   );
 }
