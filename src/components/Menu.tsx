@@ -7,10 +7,12 @@ import {
 } from "@radix-ui/react-icons";
 import { DropdownMenu, IconButton } from "@radix-ui/themes";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useCallback, useState } from "react";
 
 export default function Menu() {
+  const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,13 +28,13 @@ export default function Menu() {
         </IconButton>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content>
-        <DropdownMenu.Item asChild>
+        <DropdownMenu.Item asChild disabled={pathname === "/"}>
           <Link href="/">Home</Link>
         </DropdownMenu.Item>
-        <DropdownMenu.Item asChild>
+        <DropdownMenu.Item asChild disabled={pathname === "/about"}>
           <Link href="/about">Acerca de</Link>
         </DropdownMenu.Item>
-        <DropdownMenu.Item asChild>
+        <DropdownMenu.Item asChild disabled={pathname === "/contact"}>
           <Link href="/contact">Contacto</Link>
         </DropdownMenu.Item>
         <DropdownMenu.Separator />
