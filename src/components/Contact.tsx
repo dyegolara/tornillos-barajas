@@ -9,7 +9,7 @@ export default function Contact() {
     <>
       <Flex justify={"center"} mb={{ initial: "6", sm: "7" }}>
         <Button size="4" variant="solid" color="green" asChild>
-          <NextLink href="https://wa.me/525522705205">
+          <NextLink href="https://wa.me/525578736787">
             <BsWhatsapp />
             Envíanos WhatsApp
           </NextLink>
@@ -31,8 +31,8 @@ export default function Contact() {
                 Teléfono:
                 <br />
                 <Link asChild>
-                  <NextLink href={`tel:53706821`}>
-                    <PiFactory /> 5307 6821
+                  <NextLink href={`tel:5578736787`}>
+                    <PiFactory /> 55 7873 6787
                   </NextLink>
                 </Link>
               </Text>
@@ -60,8 +60,8 @@ export default function Contact() {
                 </Link>
                 <br />
                 <Link asChild>
-                  <NextLink href={`tel:5522705205`}>
-                    <MobileIcon /> 55 2270 5205
+                  <NextLink href={`tel:5626537840`}>
+                    <MobileIcon /> 56 2653 7840
                   </NextLink>
                 </Link>
               </Text>
